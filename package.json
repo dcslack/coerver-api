@@ -1,0 +1,22 @@
+{
+  "name": "coerver-api",
+  "version": "0.0.1",
+  "description": "Coerver Colorado's API.",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcslack/coerver-api.git"
+  },
+  "author": "Dylan Slack <dylanslack@gmail.com> (http://www.dylanslack.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcslack/coerver-api/issues"
+  },
+  "homepage": "https://github.com/dcslack/coerver-api#readme",
+  "dependencies": {
+    "restle": "0.3.0-alpha.9"
+  }
+}
