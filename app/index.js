@@ -12,8 +12,14 @@ app.register('curriculum', schemas.curriculum);
 app.register('grade', schemas.grade);
 app.register('group', schemas.group);
 app.register('participant', schemas.participant);
+
+app.register('program', schemas.program);
+app.register('record', schemas.record);
+app.register('registration', schemas.registration);
+app.register('scorecard', schemas.scorecard);
 app.register('session', schemas.session);
 app.register('stat', schemas.stat);
 app.register('user', schemas.user);
+
 
 app.on('ready', () => console.log(`Coerver API running at port ${app.port}`));
