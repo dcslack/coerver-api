@@ -21,7 +21,7 @@
     "bluebird": "^2.10.2",
     "lodash": "^3.10.1",
     "mongodb": "^2.0.46",
-    "restle": "0.3.0-alpha.9",
-    "restle-mongodb": "0.0.1"
+    "restle": "0.3.0-alpha.11",
+    "restle-mongodb": "0.1.0"
   }
 }

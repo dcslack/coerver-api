@@ -38,7 +38,7 @@ app.route('/export', 'get', function(req, res, next) {
   app.model('participant').findOne(query)
 
   .then(participant => {
-    return app.model('grade').find({ participant: new ObjectId(participant.id) });
+    return app.model('grade').find(null, { participant: participant.id });
   })
 
   .then(grades => {
