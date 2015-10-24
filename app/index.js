@@ -1,10 +1,13 @@
 const Restle = require('restle');
+const Adapter = require('restle-mongodb');
 const schemas = require('./schemas');
 
 // setup
+const url = process.env.MONGOHQ_URL;
+const adapter = new Adapter({ url })
 const namespace = 'api';
 const port = process.env.PORT;
-const app = new Restle({ namespace, port });
+const app = new Restle({ namespace, port, adapter });
 
 // models
 app.register('card', schemas.card);
@@ -26,4 +29,4 @@ app.on('user.create', require('./events/user-create'));
 app.on('ready', () => console.log(`Coerver API running at port ${app.port}`));
 
 // routes
-app.route('/export', require('./routes/export'));
+app.route('/export', 'get', require('./routes/export'));

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/dcslack/coerver-api#readme",
   "dependencies": {
     "bcrypt": "^0.8.5",
-    "restle": "0.3.0-alpha.9"
+    "restle": "0.3.0-alpha.9",
+    "restle-mongodb": "0.0.1"
   }
 }

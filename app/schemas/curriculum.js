@@ -9,6 +9,5 @@ module.exports = {
   },
   relationships: {
     stats: { type: 'stat', isMany: true },
-    coupons: { type: 'coupon', isMany: true },
   },
 };

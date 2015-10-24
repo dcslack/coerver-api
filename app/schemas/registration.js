@@ -9,6 +9,6 @@ module.exports = {
     user: { type: 'user', isMany: false },
     participant: { type: 'participant', isMany: false },
     coupon: { type: 'coupon', isMany: false },
-
+    payments: { type: 'payment', isMany: true },
   },
 };
