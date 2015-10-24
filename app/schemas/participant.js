@@ -5,4 +5,7 @@ module.exports = {
     firstName: { type: 'string' },
     lastName: { type: 'string' },
   },
+  relationships: {
+    user: { type: 'user', isMany: false },
+  },
 };

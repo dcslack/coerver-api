@@ -1,6 +1,9 @@
 const Restle = require('restle');
 const Adapter = require('restle-mongodb');
+const ObjectId = require('mongodb').ObjectId;
+const Promise = require('bluebird');
 const schemas = require('./schemas');
+const _ = require('lodash');
 
 // setup
 const url = process.env.MONGOHQ_URL;
@@ -29,4 +32,16 @@ app.on('user.create', require('./events/user-create'));
 app.on('ready', () => console.log(`Coerver API running at port ${app.port}`));
 
 // routes
-app.route('/export', 'get', require('./routes/export'));
+app.route('/export', 'get', function(req, res, next) {
+  const query = req.query;
+
+  app.model('participant').findOne(query)
+
+  .then(participant => {
+    return app.model('grade').find({ participant: new ObjectId(participant.id) });
+  })
+
+  .then(grades => {
+    return res.json(grades.serialize());
+  });
+});
