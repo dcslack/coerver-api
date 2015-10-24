@@ -43,5 +43,9 @@ app.route('/export', 'get', function(req, res, next) {
 
   .then(grades => {
     return res.json(grades.serialize());
+  })
+
+  .catch(err => {
+    return res.status(404).json(err);
   });
 });
